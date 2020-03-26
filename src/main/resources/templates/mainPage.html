@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+    <link th:href="@{/css/mainPage.css}" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap" rel="stylesheet"/>
+    <script th:src="@{/js/mainPage.js}"></script>
+</head>
+<body th:classappend="true == false?'light-web-theme':'dark-web-theme'">
+<header>
+    <div class="logo-container">
+        <!--         <img src="/images/logo.png" alt="logo"/>-->
+
+        <!--         <h4 class="logo"> Job Aura </h4>-->
+        <img th:src="@{/images/logo.png}" th:alt="logo"/>
+        <!--         <h4 th:class="logo"> JobAura </h4>-->
+    </div>
+</header>
+<div th:each="company:${companies}">
+    <div th:text="${company.getId()}"></div>
+    <div th:text="${company.getAge()}"></div>
+    <div th:text="${company.getName()}"></div>
+    <div th:text="${company.getName()}"></div>
+</div>
+</body>
+</html>

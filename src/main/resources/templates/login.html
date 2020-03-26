@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link th:href="@{/css/login.css}" rel="stylesheet"/>
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script th:src="@{/js/login.js}"></script>
+    <script th:src="@{/js.registration2.js}"></script>
+
+    <meta th:name="_csrf_name" th:content="${_csrf.parameterName}">
+    <meta th:name="_csrf_value" th:content="${_csrf.token}">
+<!--    // кросс доменный запрос-->
+
+    <style>
+        #form-messages{
+            background-color: rgb(255, 232, 232);
+            border: 1px solid red;
+            color: red;
+            display: none;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            padding: 10px 25px;
+            max-width: 250px;
+
+        }
+    </style>
+
+</head>
+<body>
+<div class="login-box">
+    <div class="lb-header">
+        <a href="#" class="active" id="login-box-link">Login</a>
+        <a href="#" id="signup-box-link">Sign Up</a>
+    </div>
+    <div class="social-login">
+        <a href="#">
+            <i class="fa fa-facebook fa-lg"></i>
+            Login with facebook
+        </a>
+        <a href="#">
+            <i class="fa fa-google-plus fa-lg"></i>
+            Login with Google
+        </a>
+    </div>
+
+    <form class="email-login" onsubmit="sendLoginRequest()">
+        <div class="u-form-group">
+            <ul id="form-messages">
+                <li></li>
+            </ul>
+        </div>
+        <div class="u-form-group">
+            <input type="text" placeholder="Username"/>
+        </div>
+        <div class="u-form-group">
+            <input type="password" placeholder="Password"/>
+        </div>
+        <div class="u-form-group">
+            <button id="login_btn" onclick="sendLoginRequest()">Login</button>
+        </div>
+        <div class="u-form-group">
+                <button onclick="function forgotPassword() {
+                }
+                forgotPassword()">Forgot password</button>
+        </div>
+    </form>
+    <form class="email-signup" onsubmit="sendRegistrationRequest()">
+        <div class="u-form-group">
+            <label>First Name</label>
+            <input type="text" placeholder="Name"/>
+        </div>
+        <div>
+            <label>Second Name</label>
+            <input type="text" placeholder="Surname"/>
+        </div>
+        <div>
+            <label>Username</label>
+            <input type="text"  placeholder="Username"/>
+        </div>
+        <div>
+            <label>Email</label>
+            <input type="email" placeholder="Email">
+        </div>
+        <div>
+            <label>Password</label>
+            <input type="password" placeholder="Password"/>
+        </div>
+        <div>
+            <label>Confirm Password</label>
+            <input type="password" placeholder="Password">
+        </div>
+        <div
+            <div class="u-form-group">
+                <button id="signup_btn" onclick="sendLoginRequest()">Sign Up</button>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

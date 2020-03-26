@@ -1,0 +1,37 @@
+/** {*/
+/*    margin: 0px;*/
+/*    padding: 0px;*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+body {
+
+
+    /* выбор темы пользователя который сбор будет осуществлять из класса коллекции. ОСноввываясь на выборе пользователя.
+    Каждая тема в своем классе.
+     */
+
+
+    /*Timber background*/
+    /*background: #fc00ff;  !* fallback for old browsers *!*/
+    /*background: -webkit-linear-gradient(to right, #00dbde, #fc00ff);  !* Chrome 10-25, Safari 5.1-6 *!*/
+    /*background: linear-gradient(to right, #00dbde, #fc00ff); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+
+
+}
+
+.dark-web-theme, .light-web-theme {
+    font-family: 'Poppins', sans-serif;
+}
+
+.dark-web-theme {
+    background: #6a3093;
+    background: -webkit-linear-gradient(to right, #a044ff, #6a3093);
+    background: linear-gradient(to right, #a044ff, #6a3093);
+}
+
+.light-web-theme {
+    background: #a80077; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #66ff00, #a80077); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #66ff00, #a80077); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
